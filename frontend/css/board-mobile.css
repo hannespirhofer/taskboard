@@ -1,0 +1,245 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+/* Individual Responsive Queries */
+
+/* Remove mobile Navigation when over 1000px */
+@media (min-width: 1200px) {
+    .navbar-mobile-bottom {
+        display: none;
+    }
+
+    .board-inner-head .add-task-desktop {
+        display: block;
+    }
+
+    .board-inner-head .add-task-mobile {
+        display: none;
+    }
+}
+
+@media (max-width: 1450px) {
+    .column {
+        flex: calc((100% / 3) - 48px / 3);
+        max-width: calc((100% / 3) - 48px / 3);
+        box-sizing: border-box;
+    }
+}
+
+/* Here starts the responsiveness (header adaptation, sidebar removing and mobile footer addition) */
+@media (max-width: 1200px) {
+    /* .board-container {
+        margin-top: 110px;
+    } */
+
+    .board-inner-head {
+        gap: 16px;
+        /* margin: 0 25px; */
+    }
+
+    .board-inner-head .add-task-desktop {
+        display: none;
+    }
+
+    .board-inner-head input {
+        margin-right: 0;
+    }
+
+    .board-inner-head .add-task-mobile {
+        height: 42px;
+        aspect-ratio: 1/1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* Unset Desktop values from button-dark */
+        width: unset;
+        padding: unset;
+    }
+
+    .board-inner-head .add-task-mobile>img {
+        padding: unset;
+    }
+
+    .board-inner-head>div {
+        width: 100%;
+    }
+
+    .board-inner-head .inputField {
+        width: 100%;
+    }
+
+    .board-content {
+        overflow: auto;
+    }
+
+    .row {
+        padding: 40px 0;
+    }
+
+    .task-holder {
+        padding-bottom: 50px;
+    }
+
+    .content-main {
+        margin-left: 0;
+    }
+
+    .board-inner-head {
+        flex-direction: column;
+    }
+
+    /* .content-header {
+        margin-left: 0 !important;
+        padding: 0 40px;
+        position: absolute;
+        width: 100%;
+    } */
+
+    .navbar-mobile-bottom {
+        display: flex;
+    }
+
+    .navbar-mobile-content {
+        display: flex;
+    }
+
+    .nav-left {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: flex;
+    }
+}
+
+@media (max-width: 950px) {
+    .column {
+        flex: calc(50% - 24px / 2);
+        max-width: calc(50% - 24px / 2);
+        padding: 0;
+    }
+
+    .row {
+        gap: 24px;
+    }
+
+    /* .header-left {
+        display: none;
+    }
+
+    .mobile-logo {
+        display: block !important;
+    } */
+
+    /* .header-profile-icon {
+        height: 40px;
+        width: 40px;
+        border-width: 2px;
+        font-size: 11px;
+    } */
+
+    /* .header-question-icon {
+        display: none;
+    } */
+
+    .mobile-logo img {
+        height: 40px;
+    }
+
+    .mobileNavbarIcons {
+        width: 32px;
+        height: 32px;
+    }
+
+    .navbar-mobile-bottom {
+        gap: 48px !important;
+    }
+}
+
+@media (max-width: 550px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+        padding: 20px 0 20px 20px;
+    }
+
+    .col-head {
+        margin-bottom: 0;
+    }
+
+    .navbar-mobile-bottom {
+        gap: 16px !important;
+    }
+
+    .task-holder {
+        flex-direction: row;
+        overflow-x: auto;
+        height: unset;
+        min-height: 250px;
+        padding-bottom: 16px;
+    }
+
+    .todo {
+        max-height: 325px;
+        min-width: 200px;
+        justify-content: space-between;
+    }
+
+    .board-subtasks {
+        flex-direction: column;
+        align-items: self-start;
+    }
+
+    .category-board,
+    .todo-header,
+    .todo-description {
+        font-size: 14px;
+    }
+
+    .todo-description {
+        max-height: 50px;
+    }
+
+    .todo-header {
+        max-height: 35px;
+        overflow-y: auto;
+    }
+
+    .todo-details {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        justify-content: space-between;
+    }    
+}
+
+@media (max-width: 450px) {
+    .board-container {
+        padding: 0 16px;
+    }
+
+    .column {
+        padding: 0;
+        gap: 16px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row {
+        gap: 48px;
+        padding: 0 0 24px 0;
+    }
+}

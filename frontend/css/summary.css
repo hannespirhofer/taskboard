@@ -1,0 +1,644 @@
+body {
+  overflow: auto;
+}
+
+.mainContentSummary_container {
+  display: flex;
+  height: 100vh;
+}
+
+#summaryContent_container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.summary-wrapper {
+  padding: 40px;
+  box-sizing: border-box;
+  height: calc(100% - 100px);
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  overflow: auto;
+}
+
+.summary-content-wrapper {
+  display: flex;
+  gap: 32px;
+  width: 100%;
+}
+
+/* fix header Pos */
+
+/* .content-header {
+  margin-left: 0 !important;
+} */
+
+/* header */
+
+.summaryHeader {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.summaryHeadline {
+  font-size: 61px;
+  font-weight: 700;
+  color: black;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+.dividerSummaryHeader {
+  width: 3px;
+  height: 100%;
+  background-color: #0d99ff;
+}
+
+.dividerSummaryHeaderMobile {
+  border: 3px;
+  width: 300px;
+  height: 3px;
+  background-color: #0d99ff;
+  display: none;
+}
+
+.summarySpan {
+  font-size: 27px;
+  font-weight: 400;
+}
+
+/* toDoContent */
+
+.toDoContent_container {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+  max-width: 600px;
+  gap: 24px;
+}
+
+.smallToDo_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.smallToDo_containeer {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 30px;
+  width: 50%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.bigToDo_container {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 30px;
+  width: 100%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.taskOverview_container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.smallTask_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: white;
+  border-radius: 30px;
+  width: 30%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+.bigToDoAndGreetUser_container {
+  width: 100%;
+}
+
+#greetUserHeadline {
+  font-size: 47px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.greetUserContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+#greetUserName {
+  font-weight: bold;
+  font-size: 47px;
+  color: #0d99ff;
+  margin: 0;
+}
+
+/* innerContent */
+
+.dflexRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.dflexColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summaryToDoTaskHeadlines {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  font-size: 64px;
+  font-weight: 600;
+}
+
+.summarySmallSpan {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.urgenTaskContent_container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.urgentTask {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.summaryImg {
+  height: 60px;
+  width: 60px;
+}
+
+.dividerUrgentTask {
+  height: 100%;
+  width: 3px;
+  background-color: #d1d1d1;
+}
+
+.deadlineToDateStyle {
+  font-size: 21px;
+  font-weight: 700;
+}
+
+.summarySmallSpan {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* hovereffects */
+
+.smallToDo_containeer:hover {
+  cursor: pointer;
+  background-color: #2a3647;
+  color: white;
+}
+
+.smallToDo_containeer:hover .roundContainer {
+  background-color: white;
+}
+
+.smallToDo_containeer:hover img {
+  filter: invert(1);
+}
+
+/* .smallToDo_container:hover .roundContainerDone {
+  background-color: white;
+} */
+
+.bigToDo_container:hover {
+  cursor: pointer;
+  background-color: #2a3647;
+  color: white;
+}
+
+.roundContainerDone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  width: 64px;
+  height: 64px;
+  background-color: #2a3647;
+}
+
+.smallTask_container:hover {
+  cursor: pointer;
+  background-color: #2a3647;
+  color: white;
+}
+
+.roundContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  width: 64px;
+  height: 64px;
+  background-color: #2a3647;
+}
+
+.bigToDo_container:hover {
+  background-color: #2a3647;
+  color: white;
+  cursor: pointer;
+}
+
+.roundContainer:hover {
+  color: white;
+}
+
+.summaryImgPen {
+  width: 22px;
+  height: 22px;
+}
+
+.summaryImgDone {
+  width: 22px;
+  height: 22px;
+}
+
+.navbar-mobile-bottom {
+  display: none;
+}
+
+/* responsive */
+
+@media (max-width: 1200px) {
+  .nav-left {
+    display: none;
+  }
+
+  .mobileHeader {
+    display: flex;
+}
+
+  .navbar-mobile-bottom {
+    display: flex;
+  }
+
+  .navbar-mobile-content {
+    display: flex;
+  }
+}
+
+
+@media (max-width: 1070px) {
+
+  .navbar-mobile-content {
+    display: flex;
+  }
+
+
+  /* .content-header-mobile {
+    display: flex;
+    margin-left: 0 !important;
+  } */
+
+  /* .navbar-mobile-bottom {
+    display: flex;
+  } */
+
+  /* .navbar-mobile-content {
+    display: flex;
+  } */
+
+  .summary-content-wrapper {
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+  }
+
+  .toDoContent_container {
+    width: 100%;
+  }
+
+  .summary-wrapper {
+    align-items: center;
+  }
+
+  .summaryHeadline {
+    text-align: end;
+  }
+
+  /* .nav-left {
+    display: none;
+  } */
+
+  .mainContentSummary_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  /* .summaryHeader {
+    margin-left: 0 !important;
+    margin-top: 10px;
+  } */
+
+  #summaryContent_container {
+    margin-left: 0;
+  }
+
+  #greetUserHeadline {
+    display: none;
+  }
+
+  h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+  }
+
+  .summaryHeader {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    align-items: center;
+  }
+
+  /* .dividerSummaryHeader {
+    display: none;
+  } */
+
+  .toDoContent_container {
+    align-items: center;
+  }
+
+  /* .smallToDo_containeer {
+    width: 250px;
+    height: 170px;
+  } */
+
+  .smallToDo_container {
+    gap: 24px;
+  }
+
+  /* .smallTask_container {
+    width: 170px;
+    height: 170px;
+  } */
+
+  /* .bigToDo_container {
+    width: 550px;
+    height: 180px;
+  } */
+
+  /* .mobileNavbarIcons {
+    width: 40px;
+    height: 40px;
+  } */
+
+  .greetUserContainer {
+    display: none;
+  }
+
+  .dividerSummaryHeaderMobile {
+    display: none;
+  }
+
+  /* .header-left {
+    display: block !important;
+  } */
+
+  /* .urgenTaskContent_container {
+    gap: 30px;
+  } */
+
+  /* .taskOverview_container {
+    gap: 25px;
+  } */
+}
+
+@media (max-width: 550px) {
+  .roundContainerDone {
+    width: 44px;
+    height: 44px;
+  }
+
+  .roundContainer {
+    width: 44px;
+    height: 44px;
+  }
+
+  /* .taskOverview_container {
+    gap: 30px;
+  } */
+
+  /* .mobileNavbarIcons {
+    width: 32px;
+    height: 32px;
+  } */
+
+  /* .navbar-mobile-bottom {
+    gap: 20px;
+  } */
+
+  /* .smallToDo_containeer {
+    width: 186px;
+    height: 110px;
+  } */
+
+  /* .smallTask_container {
+    width: 116px;
+    height: 116px;
+  } */
+
+  /* .bigToDo_container {
+    width: 410px;
+    height: 110px;
+  } */
+
+  /* .summaryHeader {
+    display: flex;
+    flex-direction: column;
+    padding-left: 74px;
+    padding-bottom: 50px;
+    gap: 15px;
+    align-items: start;
+  } */
+
+  .summaryToDoTaskHeadlines {
+    font-size: 47px;
+  }
+
+  .summaryImg {
+    width: 40px;
+    height: 40px;
+  }
+
+  .deadlineToDateStyle {
+    font-size: 16px;
+  }
+
+  .summarySmallSpan {
+    font-size: 14px;
+  }
+
+  .toDoContent_container {
+    align-items: start;
+  }
+
+  /* .summaryHeader {
+    padding-left: 10px;
+  } */
+
+  /* .mobileSpan {
+    font-size: 12px;
+  } */
+
+  .mobileLogoSmall {
+    display: block !important;
+  }
+
+  /* .header-left {
+    display: block !important;
+  } */
+
+  /* .smallToDo_container {
+    margin-left: 5px;
+  } */
+
+  /* .bigToDo_container {
+    margin-left: 5px;
+  } */
+
+  /* .taskOverview_container {
+    margin-left: 5px;
+  } */
+}
+
+@media (max-width: 450px) {
+  /* .mobileSpan {
+    font-size: 10px;
+  } */
+
+  .mobileLogoSmall {
+    display: block !important;
+  }
+
+  .summary-wrapper {
+    padding: 16px;
+    gap: 16px;
+  }
+
+  /* .mobileNavbarIcons {
+    width: 28px;
+    height: 28px;
+  } */
+
+  /* .navbar-mobile-bottom {
+    gap: 15px;
+  } */
+
+  /* .smallToDo_containeer {
+    width: 145px;
+    height: 110px;
+  } */
+
+  /* .smallTask_container {
+    width: 95px;
+    height: 95px;
+  } */
+
+  /* .bigToDo_container {
+    width: 300px;
+    height: 110px;
+  } */
+
+  /* .summaryHeader {
+    
+  } */
+
+  .smallToDo_containeer {
+    padding: 16px;
+  }
+
+  .summaryToDoTaskHeadlines {
+    font-size: 37px;
+  }
+
+  .summaryImg {
+    width: 38px;
+    height: 38px;
+  }
+
+  .deadlineToDateStyle {
+    font-size: 12px;
+  }
+
+  .summarySmallSpan {
+    font-size: 10px;
+    text-wrap: wrap;
+  }
+
+  .toDoContent_container {
+    align-items: start;
+  }
+
+  /* .summaryHeader {
+    padding-left: 10px;
+  } */
+
+  .smallToDo_container {
+    gap: 10px;
+  }
+
+  .taskOverview_container {
+    gap: 10px;
+  }
+
+  /* .navbar-mobile-content {
+    padding: 10px;
+  } */
+
+  .urgentTask {
+    gap: 20px;
+    margin-left: 10px;
+  }
+
+  .summaryHeadline {
+    font-size: 18px;
+  }
+
+  .summarySpan {
+    font-size: 16px;
+  }
+
+  .deadlineToDateStyle {
+    font-size: 12px;
+  }
+
+  .summaryHeader {
+    display: none;
+  }
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <meta name='viewport' content='initial-scale=1, viewport-fit=cover'>
+
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/general-design.css" />
+    <link rel="stylesheet" href="./css/overlay.css" />
+
+    <!-- This is used for the main App Container when logged in -->
+    <link rel="stylesheet" href="./css/mainMenu.css" />
+
+    <!-- This CSS is used for the Contacts Section -->
+    <link rel="stylesheet" href="./css/contacts.css" />
+    <link rel="stylesheet" href="./css/contacts-mobile.css" />
+    <link rel="stylesheet" href="./css/mobileSpecific.css" />
+
+    <script src="./js/mobile-design.js"></script>
+    <!-- <script src="./js/summary.js"></script> -->
+    <script src="./js/script.js"></script>
+    <!-- <script src="./js/login.js"></script> -->
+    <script src="./js/includeHtml.js"></script>
+    <script src="./js/contacts_mobile.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/remoteStorage.js"></script>
+    <script src="./js/contacts_overlay.js"></script>
+    <script src="./js/auth.js"></script>
+</head>
+
+<body onload="init()">
+    <div id="popupContainer">
+        <div id="logoutContent">
+            <div class="logoutHeaderContent">
+                <!-- <a href="./legal/legalNotice.html">Legal Notice</a>
+                <a href="./legal/privacyPolicy.html">Privacy Policy</a> -->
+                <a href="" onclick="logUserOut(event)">Log out</a>
+            </div>
+        </div>
+        <!-- Include Header Template -->
+        <div w3-include-html="./templates/overlay_template.html"></div>
+
+        <div class="contacts-mainContainer">
+            <!-- Include Header Template -->
+            <div class="" w3-include-html="./templates/sidebar_template.html"></div>
+
+            <div class="board-content">
+                <!-- Include Main Header Template -->
+                <div w3-include-html="./templates/mainHeader_template.html"></div>
+
+                <!-- Include Contacts Template -->
+                <div class="contacts-container content-main" w3-include-html="./templates/contacts_template.html"></div>
+            </div>
+
+        </div>
+
+        <!-- Includes Mobile Navigation at the Bottom
+        <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>-->
+</body>
+
+</html>

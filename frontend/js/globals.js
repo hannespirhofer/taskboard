@@ -1,0 +1,1 @@
+const activeUser = null;

@@ -1,0 +1,560 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {}
+
+
+/* responsive */
+
+/* Remove mobile Navigation when over 1000px */
+@media (min-width: 1000px) {
+
+    .navbar-mobile-bottom,
+    .close-sign-mobile,
+    .backArrow,
+    .newcontact-mobile,
+    .edit-contact-mobile-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+
+    .backArrow,
+    .newcontact-mobile {
+        display: none;
+    }
+
+    .content-header {
+        margin-left: 0 !important;
+    }
+
+    .navbar-mobile-bottom {
+        display: flex;
+    }
+
+    .navbar-mobile-content {
+        display: flex;
+    }
+
+    .nav-left {
+        display: none;
+    }
+
+    .mobileHeader {
+        display: flex;
+    }
+
+    .contacts-container {
+        margin-left: 0;
+        box-sizing: border-box;
+    }
+
+    .contacts-main {
+        padding: 20px 20px 20px 40px;
+        box-sizing: border-box;
+        overflow: scroll;
+        height: 100%;
+    }
+
+    .contacts-info {
+        margin: 0;
+    }
+
+    /* 
+    .mainContentSummary_container {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .summaryHeader {
+        margin-left: 0 !important;
+        margin-top: 10px;
+    }
+
+    #summaryContent_container {
+        margin-left: 0;
+    }
+
+    #greetUserHeadline {
+        display: none;
+    }
+ */
+    /*     h1 {
+        margin-block-start: 0;
+        margin-block-end: 0;
+    }
+
+    .summaryHeader {
+        display: flex;
+        flex-direction: column;
+        padding-left: 50px;
+        padding-bottom: 20px !important;
+        gap: 5px;
+        align-items: center;
+    } */
+    /* 
+    .dividerSummaryHeader {
+        display: none;
+    }
+
+    .toDoContent_container {
+        align-items: center;
+    }
+
+    .smallToDo_containeer {
+        width: 250px;
+        height: 170px;
+    }
+
+    .smallToDo_container {
+        gap: 38px;
+    }
+
+    .smallTask_container {
+        width: 170px;
+        height: 170px;
+    }
+
+    .bigToDo_container {
+        width: 550px;
+        height: 180px;
+    } */
+
+    /* .mobileNavbarIcons {
+        width: 40px;
+        height: 40px;
+    }
+
+    .greetUserContainer {
+        display: none;
+    }
+
+    .dividerSummaryHeaderMobile {
+        display: block;
+        height: 2px;
+    } */
+}
+
+@media (max-width: 1000px) {
+    .overlay-content-container {
+        width: 95%;
+    }
+
+    .contacts-main {
+        padding: 25px;
+    }
+
+    .close-sign-mobile {
+        display: none;
+    }
+
+    .contact {
+        gap: 16px;
+    }
+
+    /* .occ-right {
+        width: 100%;
+        padding: 16px;
+    } */
+
+    /* .edit-contact-form {
+        gap: 8px;
+        justify-content: flex-start;
+    } */
+
+    .ctc-fullname,
+    .ctc-email {
+        overflow-wrap: anywhere;
+    }
+
+    .ctc-left {
+        padding: 32px 24px;
+    }
+
+    .newcontact-btn {
+        gap: 8px;
+        height: unset;
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 950px) {
+    .header-left {
+        display: none;
+    }
+
+    /* .header-profile-icon {
+        height: 40px;
+        width: 40px;
+        border-width: 2px;
+        font-size: 11px;
+    } */
+
+    /* .header-question-icon {
+        display: none;
+    } */
+
+    .mobile-logo img {
+        height: 40px;
+    }
+
+    .ctc-list {
+        margin-top: 0;
+    }
+
+    .ctc-right {
+        display: none;
+        width: 100%;
+    }
+
+    .newcontact-btn {
+        display: none;
+    }
+
+    .mobile-menu,
+    .newcontact-mobile {
+        display: flex;
+        position: absolute;
+        bottom: 24px;
+        right: 24px;
+        font-family: Inter;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 19px;
+        letter-spacing: 0em;
+        text-align: left;
+        color: #2A3647;
+    }
+
+    .newcontact-btn-mobile,
+    .newcontact-mobile {
+        background-color: #2A3647;
+        border-radius: 50%;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .newcontact-btn-mobile:hover,
+    .newcontact-mobile:hover {
+        cursor: pointer;
+    }
+
+    .edit-contact-mobile-menu {
+        background-color: #fff;
+        box-shadow: 0px 4px 6px 0px rgba(0, 0, 0, .02), 0px 2px 12px -2px rgba(0, 0, 0, .08), 0px 3px 6px 0px rgba(0, 0, 0, .06);
+        padding: 16px;
+        border-radius: 20px 20px 0px 20px;
+        display: flex;
+        gap: 16px;
+        flex-direction: column;
+    }
+
+    .edit-contact-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .delete-contact-mobile {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .edit-contact-mobile:hover,
+    .delete-contact-mobile:hover {
+        cursor: pointer;
+    }
+
+    .pencil {
+        padding: 2px 3px;
+    }
+
+    .ctc-list {
+        align-items: unset;
+        padding-bottom: 48px;
+    }
+
+    .ctc-left {
+        padding: 24px;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .contact {
+        width: 100%;
+        gap: 16px;
+        padding-left: 17px;
+    }
+
+    .mobileNavbarIcons {
+        width: 32px;
+        height: 32px;
+    }
+
+    .contacts-main {
+        margin-top: 20px;
+        width: 100%;
+        overflow-y: auto;
+    }
+
+    .contacts-main-header {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin: 0;
+        gap: 16px;
+    }
+
+    .inner-box {
+        margin-top: 32px;
+    }
+
+    .contacts-content {
+        margin-top: 48px;
+    }
+
+    .cmh-mobile {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        margin: 16px 0;
+    }
+
+    .edit-contact {
+        display: none;
+    }
+
+    .contacts-info {
+        margin: 12px 0;
+    }
+
+    .backArrow {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .backArrow:hover {
+        cursor: pointer;
+    }
+
+    .contacts-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+    }
+
+    .contacts-header-left {
+        font-family: Inter;
+        font-size: 47px;
+        font-weight: 700;
+        line-height: 56px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .contacts-header-right {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .contacts-header-divider {
+        border-bottom: 3px solid #29ABE2;
+        height: 0;
+        border-left: none;
+        width: 123px;
+    }
+
+    .cmh-logo-big-mobile {
+        width: 80px;
+        height: 80px;
+        font-family: Inter;
+        font-size: 27px;
+        font-weight: 400;
+        line-height: 32px;
+        letter-spacing: 0em;
+        text-align: center;
+    }
+
+    .cmh-fullname {
+        font-family: Inter;
+        font-size: 36px;
+        font-weight: 700;
+        line-height: 43px;
+        letter-spacing: 0em;
+        text-align: left;
+        overflow-wrap: anywhere;
+    }
+
+    .navbar-mobile-bottom {
+        gap: 32px !important;
+    }
+
+    /* Media Queries for Overlay */
+
+    .overlay-container {
+        align-items: center;
+    }
+
+    .overlay-content-container {
+        height: auto;
+        max-height: 90%;
+        width: 90%;
+        flex-direction: column;
+        overflow: auto;
+    }
+
+    .overlay-form {
+        width: 100%;
+    }
+
+    .occ-left {
+        width: 100%;
+        border-radius: 25px 25px 0 0;
+        height: unset;
+        padding: 30px 30px 80px 30px;
+    }
+
+    .occ-right {
+        padding: 0 30px 30px 30px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .edit-contact-form {
+        flex-direction: column;
+        margin-top: 0;
+        align-items: center;
+        gap: 0px;
+    }
+
+    .overlay-logo {
+        display: none;
+    }
+
+    .overlay-headline {
+        font-family: Inter;
+        font-size: 47px;
+        font-weight: 700;
+        line-height: 56px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .overlay-sub-headline {
+        font-family: Inter;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0em;
+        text-align: left;
+    }
+
+    .cmh-logo-big-overlay {
+        margin-bottom: 16px;
+        margin-top: -60px;
+    }
+
+    .button-container {
+        justify-content: center;
+    }
+
+    .cancel-btn {
+        display: none;
+    }
+
+    .close-sign-mobile {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .close-sign-mobile:hover {
+        cursor: pointer;
+    }
+
+    .close-sign-desktop {
+        display: none;
+    }
+
+    /* 
+    .smallToDo_containeer {
+        width: 186px;
+        height: 110px;
+    }
+
+    .smallTask_container {
+        width: 116px;
+        height: 116px;
+    }
+
+    .bigToDo_container {
+        width: 410px;
+        height: 110px;
+    }
+
+    .summaryHeader {
+        display: flex;
+        flex-direction: column;
+        padding-left: 74px;
+        padding-bottom: 50px;
+        gap: 15px;
+        align-items: start;
+    }
+
+    .summaryToDoTaskHeadlines {
+        font-size: 47px;
+    }
+
+    .summaryImg {
+        width: 40px;
+        height: 40px;
+    }
+
+    .deadlineToDateStyle {
+        font-size: 16px;
+    }
+
+    .summarySmallSpan {
+        font-size: 14px;
+    }
+
+    .toDoContent_container {
+        align-items: start;
+    }
+
+    .summaryHeader {
+        padding-left: 10px;
+    }
+
+    .mobileSpan {
+        font-size: 12px;
+    } */
+}
+
+@media (max-width: 450px) {
+    .navbar-mobile-bottom {
+        gap: 16px !important;
+    }
+}

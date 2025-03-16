@@ -1,0 +1,416 @@
+/* Clear UserAgent Stylesheets */
+
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+/* general CSS */
+
+.d-none {
+    display: none;
+}
+
+/* .mobile-footer-addTask {
+    display: none;
+} */
+
+.mobileMenuTop-addTask {
+    display: none;
+}
+
+/* title */
+
+h1 {
+    font-weight: 700;
+    font-size: 61px;
+    line-height: 73.2px;
+    color: #000000;
+}
+
+/* Add-Task-Container */
+
+
+
+.mainContentAddTask_container {
+    display: flex;
+    height: 100vh;
+}
+
+.main-header-addTask {
+    width: 100%;
+}
+
+.main-addtask {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.addTask-form {
+    height: 100%;
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: normal;
+    gap: 32px;
+}
+
+.board-container-add-task {
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    box-sizing: border-box;
+    gap: 16px;
+    height: calc(100% - 100px);
+    margin-bottom: 8px;
+}
+
+.add-task-container {
+    display: flex;
+    width: 100%;
+}
+
+.add-task-container label {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2A3647;
+}
+
+.focus:focus {
+    outline: none;
+    border: 1px solid #29ABE2;
+}
+
+/* Container-Left */
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    flex: calc(50%);
+    gap: 24px;
+}
+
+.star {
+    color: #FF8190;
+}
+
+.add-task-container input {
+    width: 100%;
+}
+
+/* .title {
+    width: 100%;
+    height: 96px;
+    position: relative;
+} */
+
+/* .title input {
+    margin-top: 8px;
+} */
+
+.focus:focus {
+    outline: none;
+    border: 1px solid #29ABE2;
+}
+
+.title-no-input,
+.date-no-input {
+    outline: none;
+    border: 1px solid #FF8190;
+}
+
+.title-required,
+.date-required {
+    font-size: 12px;
+    line-height: 14.4px;
+    font-weight: 400;
+    color: #FF8190;
+    margin-top: 6px;
+}
+
+.description {
+    width: 100%;
+}
+
+.desc-input-container {
+    width: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.description textarea:focus {
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25.2px;
+    color: #000000;
+}
+
+textarea {
+    resize: vertical;
+    width: 100%;
+    height: 120px;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    background-color: #FFFFFF;
+    font-family: Inter;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25.2px;
+    box-sizing: border-box;
+    padding: 18px 16px;
+    z-index: 99;
+}
+
+/* .desc-input-container::after {
+    content: url('../assets/img/recurso.png');
+    position: absolute;
+    bottom: 22px;
+    right: 6px;
+    width: 18.9px;
+    height: 18.9px;
+} */
+
+textarea::placeholder {
+    color: #D1D1D1;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+/* .assigned-to {
+    width: 100%;
+} */
+
+.a-t-input-container,
+.category-container,
+.subtasks-container {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #D1D1D1;
+    box-sizing: border-box;
+}
+
+.progress-select {
+    width: 100%;
+    font-size: 16px;
+    line-height: 19.2px;
+}
+
+.inputField:hover {
+    cursor: pointer;
+}
+
+#assignedToInput,
+#categoryInput,
+#subtaskInput {
+    width: 360px;
+    outline: unset;
+    border: unset;
+}
+
+.focus-container {
+    border: 1px solid #29ABE2;
+}
+
+.arrow-drop-down,
+.plus-img {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 20px;
+}
+
+.arrow-drop-down:hover {
+    cursor: pointer;
+}
+
+.assigned-to input::placeholder {
+    color: #000000;
+}
+
+.assigned-to-drop-down {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    max-height: 288px;
+}
+
+.assigned-to-drop-down-wrapper {
+    margin-top: 8px;
+    max-height: 220px;
+    overflow-y: auto;
+}
+
+.drop-down-contacts-container {
+    width: 100%;
+    height: 56px;
+    padding: 7px 16px 7px 16px;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.initial-name-container {
+    display: flex;
+    align-items: center;
+}
+
+.initial-at {
+    width: 42px;
+    height: 42px;
+    margin-right: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+}
+
+.initial-at span {
+    width: 28px;
+    height: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14.4px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.check-button-contacts-at,
+.checked-button-contacts-at {
+    width: 24px;
+    height: 24px;
+}
+
+.check-button-contacts-at:hover,
+.checked-button-contacts-at:hover {
+    cursor: pointer;
+}
+
+.background-selected-contact {
+    background-color: #2A3647;
+}
+
+.background-selected-contact:hover {
+    background-color: #091931;
+}
+
+.white {
+    color: white;
+}
+
+.contacts-selected-container {
+    margin-top: 4px !important;
+    display: flex;
+    max-width: 100%;
+    overflow: auto;
+}
+
+.initial-at:not(:first-child) {
+    margin-left: -35px;
+}
+
+.contacts-selected-container .initial-at {
+    min-width: 42px;
+}
+
+/* initials-color */
+
+.a,
+.b {
+    background-color: #FF7A00;
+}
+
+.c,
+.d {
+    background-color: #FF5EB3;
+}
+
+.e,
+.f {
+    background-color: #6E52FF;
+}
+
+.g,
+.h {
+    background-color: #9327FF;
+}
+
+.i,
+.j {
+    background-color: #00BEE8;
+}
+
+.k,
+.l {
+    background-color: #1FD7C1;
+}
+
+.m,
+.n {
+    background-color: #FF745E;
+}
+
+.o,
+.p {
+    background-color: #FFA35E;
+}
+
+.q,
+.r {
+    background-color: #FC71FF;
+}
+
+.s,
+.t {
+    background-color: #FFC701;
+}
+
+.u,
+.v {
+    background-color: #0038FF;
+}
+
+.w,
+.x {
+    background-color: #C3FF2B;
+}
+
+.y,
+.z {
+    background-color: #FFE62B;
+}
+
+/* separator */
+
+.seperator {
+    background-color: #D1D1D1;
+    width: 1px;
+    height: 100%;
+    margin-left: 20px;
+    margin-right: 20px;
+}

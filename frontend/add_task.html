@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+    <title>Add Task</title>
+    <link rel="stylesheet" href="./css/fonts.css">
+    <link rel="stylesheet" href="./css/mainMenu.css">
+    <link rel="stylesheet" href="./css/mobileSpecific.css">
+    <link rel="stylesheet" href="./css/general-design.css">
+    <link rel="stylesheet" href="./css/addTask.css">
+    <link rel="stylesheet" href="./css/addTask-right.css">
+    <link rel="stylesheet" href="./css/addTask-mobile.css">
+    <!-- <link rel="stylesheet" href="./css/addTask-footer-sidebar.css"> -->
+
+    <script src="./js/script.js"></script>
+    <scipt src="./js/board.js"></scipt>
+    <script src="./js/summary.js"></script>
+    <script src="./js/addTask.js"></script>
+    <script src="./js/addTask_assignedTo.js"></script>
+    <script src="./js/addTask_subtasks.js"></script>
+    <script src="./js/addTask_createTask.js"></script>
+    <script src="./js/contacts.js"></script>
+    <script src="./js/includeHtml.js"></script>
+    <script src="./js/remoteStorage.js"></script>
+    <script src="./js/auth.js"></script>
+</head>
+
+<body onload="includeHTML(), initAddTask()">
+    <div id="popupContainer">
+        <div id="logoutContent">
+            <div class="logoutHeaderContent">
+                <!-- <a href="./legal/legalNotice.html">Legal Notice</a>
+                <a href="./legal/privacyPolicy.html">Privacy Policy</a> -->
+                <a href="" onclick="logUserOut(event)">Log out</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mainContentAddTask_container">
+
+        <div class="sidebar-addTask" w3-include-html="./templates/sidebar_template.html"></div>
+
+        <div class="main-addtask">
+            <div class="main-header-addTask" w3-include-html="./templates/mainHeader_template.html"></div>
+
+            <div class="board-container board-container-add-task" w3-include-html="./templates/addTask_template.html">
+            </div>
+
+            <!-- <div class="mobile-footer-addTask" w3-include-html="./templates/mobileMenuFooter_template.html"></div> -->
+        </div>
+
+    </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon/favicon.ico">
+    <title>Board</title>
+
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/general-design.css" />
+
+    <!-- This is used for the main App Container when logged in -->
+    <link rel="stylesheet" href="./css/mainMenu.css" />
+
+    <!-- This CSS is used for the Board -->
+    <link rel="stylesheet" href="./css/board.css" />
+    <link rel="stylesheet" href="./css/board-overlay.css" />
+    <link rel="stylesheet" href="./css/board-overlay-addTask.css" />
+
+    <!-- This CSS is used for Responsive -->
+    <link rel="stylesheet" href="./css/board-mobile.css" />
+    <link rel="stylesheet" href="./css/mobileSpecific.css" />
+
+    <!-- This CSS is used for the pop-up-add-task -->
+    <link rel="stylesheet" href="./css/addTask.css" />
+    <link rel="stylesheet" href="./css/addTask-right.css" />
+    <link rel="stylesheet" href="./css/addTask-mobile.css" />
+    <link rel="stylesheet" href="./css/board-overlay-mobile.css" />
+
+    <script src="./js/mobile-design.js"></script>
+
+    <script src="./js/addTask.js"></script>
+    <script src="./js/addTask_assignedTo.js"></script>
+    <script src="./js/addTask_subtasks.js"></script>
+    <script src="./js/addTask_createTask.js"></script>
+
+    <script src="./js/summary.js"></script>
+
+    <script src="./js/includeHtml.js"></script>
+    <script src="./js/board.js"></script>
+    <script src="./js/board-overlay.js"></script>
+    <script src="./js/board-overlay_edit.js"></script>
+    <script src="./js/addTask_assignedTo_overlay.js"></script>
+    <script src="./js/addTask_subtask_overlay.js"></script>
+    <script src="./js/remoteStorage.js"></script>
+    <script src="./js/draganddrop.js"></script>
+    <script src="./js/board-mobile.js"></script>
+    <script src="./js/auth.js"></script>
+</head>
+
+<body onload="init()">
+    <div class="mainContainer" id="popupContainer">
+        <div id="logoutContent">
+            <div class="logoutHeaderContent">
+                <!-- <a href="./legal/legalNotice.html">Legal Notice</a>
+                <a href="./legal/privacyPolicy.html">Privacy Policy</a> -->
+                <a href="" onclick="logUserOut(event)">Log out</a>
+            </div>
+        </div>
+        <!-- Include Header Template -->
+        <div w3-include-html="./templates/sidebar_template.html"></div>
+        <div class="board-content">
+            <!-- Include Main Header Template -->
+            <div w3-include-html="./templates/mainHeader_template.html"></div>
+            <div class="content-main">
+                <!-- Include Board Template -->
+                <div class="board-container" w3-include-html="./templates/board_template.html"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Task Overlay Popup -->
+    <div class="pop-up-at-container d-none" id="popUpAtContainer">
+        <div class="pop-up-at-field d-none" id="popUpAtField"
+            w3-include-html="./templates/addTask_template.html"></div>
+        <div class="pop-up-task-big d-none" id="popUpTaskBig"></div>
+        <div class="pop-up-task-big-edit d-none" id="popUpEdit"></div>
+    </div>
+
+    <!-- Includes Mobile Navigation at the Bottom
+    <div w3-include-html="./templates/mobileMenuFooter_template.html"></div>-->
+
+    <script src="./js/script.js"></script>
+</body>
+
+</html>

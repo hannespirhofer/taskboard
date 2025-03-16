@@ -1,0 +1,165 @@
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    word-wrap: anywhere;
+    padding-bottom: 16px;
+}
+
+.align-center {
+    display: flex;
+    align-items: center;
+}
+
+.gap-24 {
+    gap: 24px;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.overlay-container {
+    height: 100vh;
+    width: 100vw;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content-container {
+    height: 60%;
+    width: 95%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.occ-left {
+    background-color: #2a3647;
+    width: 40%;
+    height: 100%;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 30px;
+    gap: 16px;
+    box-sizing: border-box;
+}
+
+.overlay-logo {
+    width: 54px;
+    height: 66px;
+    margin-bottom: 16px;
+}
+
+.overlay-headline {
+    font-family: Inter;
+    font-size: 61px;
+    font-weight: 700;
+    line-height: 73px;
+    letter-spacing: 0em;
+    color: #fff;
+}
+
+.overlay-sub-headline {
+    font-family: Inter;
+    font-size: 27px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0em;
+    color: #fff;
+}
+
+.description-border {
+    width: 90px;
+    height: 3px;
+    border-top: 3px solid #29abe2;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.occ-right {
+    color: black;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding: 30px;
+}
+
+.overlay-close {
+    width: 30px;
+    height: 30px;
+}
+
+.overlay-close:hover {
+    cursor: pointer;
+}
+
+.validation-message {
+    height: 16px;
+    color: #2a3647;
+    font-weight: 600;
+}
+
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: Inter;
+    font-size: 19px;
+    font-weight: 400;
+    line-height: 23px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.edit-contact-form {
+    justify-content: flex-end;
+    display: flex;
+    gap: 48px;
+    margin-top: 48px;
+}
+
+.button-container {
+    flex-wrap: wrap-reverse;
+}
+
+.input-fullname {
+    background: url("../assets/img/person.png") no-repeat right 20px center;
+}
+
+.input-email {
+    background: url("../assets/img/mail.png") no-repeat right 20px center;
+}
+
+.input-phone {
+    background: url("../assets/img/call.png") no-repeat right 20px center;
+}
+
+.highlight {
+    border: 3px solid #2a3647;
+    background-color: #2a36475d;
+}
