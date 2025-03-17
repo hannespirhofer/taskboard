@@ -8,12 +8,12 @@ async function registerUser(user) {
             body: JSON.stringify(user)
         });
         if (!res.ok) {
-            throw new Error('Regsiter failed.', res.status)
+            throw new Error(res.error)
         }
         const data = await res.json();
         return data
     } catch (error) {
-        throw new Error('Login attempt failed. Try again.')
+        throw new Error(error)
     }
 }
 

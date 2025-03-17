@@ -13,12 +13,12 @@ async function register(event) {
     debugger
     try {
         //register user with formdata - checking done already- in HOPE
-        await registerUser(partialUser);
+        const res = await registerUser(partialUser);
         clearForm();
         successSignUpPopup();
         renderLoginWindow();
     } catch (error) {
-        //eroor
+        console.error(error);
     }
 
 }
@@ -106,9 +106,9 @@ async function greetUserInSummary(email) {
 //sign Up Logic
 
 function openWithGuestLogin() {
-    guest = true;
-    localStorage.setItem('guest', JSON.stringify(guest));
-    window.location.href = "summary.html";
+    // guest = true;
+    // localStorage.setItem('guest', JSON.stringify(guest));
+    // window.location.href = "summary.html";
 }
 
 function registeredLogin() {
