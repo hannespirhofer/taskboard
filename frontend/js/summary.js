@@ -60,11 +60,13 @@ function getUser() {
 
 //OK
 function updateUsername(username) {
+    const user = JSON.parse(localStorage.getItem("user"));
     const userField = document.getElementById("greetUserName");
-    if (username) {
-        userField.innerHTML = username;
+    const text = user.firstname ? user.firstname : user.username;
+    if (text) {
+        userField.innerHTML = text;
     } else {
-        userField.innerHTML = 'Guest';
+        userField.innerHTML = 'Lizard';
     }
 }
 
@@ -82,10 +84,11 @@ function updateGreetingMessage() {
 
 //OK
 function changeHeaderInitials(username) {
-    iconHolder = document.getElementById("currentUserinHeader");
-    if (username && iconHolder) {
-        initials = username[0].slice(0, 1);
-        iconHolder.innerHTML = initials;
+    const user = JSON.parse(localStorage.getItem("user"));
+    const iconField = document.getElementById("currentUserinHeader");
+    if (user.username && iconField) {
+        initials = user.username[0].toUpperCase();
+        iconField.innerHTML = initials;
     }
 }
 

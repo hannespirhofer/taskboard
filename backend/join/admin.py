@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from join.models import AppUser, Contact, Task, SubTask
+from join.models import Contact, Task, SubTask
 
 class SubTaskInline(admin.TabularInline):
     model = SubTask
@@ -11,4 +11,4 @@ class TaskAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Task, TaskAdmin)
-admin.site.register([AppUser, Contact, SubTask])
+admin.site.register([Contact, SubTask])

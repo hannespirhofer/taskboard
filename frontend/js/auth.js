@@ -8,12 +8,13 @@ async function registerUser(user) {
             body: JSON.stringify(user)
         });
         if (!res.ok) {
-            throw new Error(res.error)
+            const errorData = await res.json();
+            throw new Error(errorData.error || 'Registration failed.')
         }
         const data = await res.json();
         return data
     } catch (error) {
-        throw new Error(error)
+        throw error
     }
 }
 

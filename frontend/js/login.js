@@ -5,22 +5,19 @@ async function init() { }
 
 async function register(event) {
     event.preventDefault();
+    const dom = event.target;
 
     const partialUser = grabFormData();
-    // fetchUsers();
-    // users.push(formdata);
-    // setUsers();
-    debugger
     try {
-        //register user with formdata - checking done already- in HOPE
-        const res = await registerUser(partialUser);
-        clearForm();
-        successSignUpPopup();
-        renderLoginWindow();
+        await registerUser(partialUser);
+        dom.querySelector("#signUpSuccess").classList.toggle("none", false);
+        setTimeout(() => {
+            clearForm()
+        },800)
     } catch (error) {
-        console.error(error);
+        dom.querySelector("#signUpPasswordCheckText").innerHTML = error.message || "An error occured.";
+        dom.querySelector("#signUpPasswordCheckText").classList.toggle("none", false);
     }
-
 }
 
 async function fetchUsers() {
@@ -100,7 +97,7 @@ function findUserNameByEmail(email) {
 async function greetUserInSummary(email) {
     const loggedInEmail = email;
     const name = findUserNameByEmail(loggedInEmail);
-    localStorage.setItem("username", name);
+    // localStorage.setItem("username", name);
 }
 
 //sign Up Logic

@@ -18,6 +18,8 @@ function showElement(id) {
 function renderSignUpWindow() {
     hideElement('loginContentContainer');
     showElement('signupContentContainer');
+    dom.querySelector("#signUpSuccess").classList.toggle("none", true);
+    // dom.querySelector("#signUpPasswordCheckText").classList.toggle("none", true);
 
     hideElement('headerSignup');
     showElement('headerLogin');
@@ -34,13 +36,13 @@ function renderLoginWindow() {
 //   summary:
 
 /* function renderSummaryPageHtml() {
-  return ` 
-   
+  return `
+
    <div class="summaryHeader">
        <h1 class="summaryHeadline">Join 360</h1>
-       <div class="dividerSummaryHeader"></div> 
+       <div class="dividerSummaryHeader"></div>
        <span class="summarySpan">Key Metrics at Glance</span>
-       <div class="dividerSummaryHeaderMobile"></div> 
+       <div class="dividerSummaryHeaderMobile"></div>
        </div>
        <div class="toDoContent_container">
        <div class="smallToDo_container">
@@ -91,7 +93,7 @@ function renderLoginWindow() {
            <p id="greetUserName">Test</p>
            </div>
        </div>
-  
+
        <div class="taskOverview_container">
            <div class="smallTask_container">
                <div class="dflexColumn">

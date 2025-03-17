@@ -11,13 +11,6 @@ class Contact(models.Model):
     def __str__(self):
         return f"{self.firstname} {self.lastname} [{self.pk}]"
 
-class AppUser(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone = models.CharField(max_length=12)
-
-    def __str__(self):
-        return f"{self.user.first_name} {self.user.last_name} [{self.pk}]"
-
 class Task(models.Model):
     PRIORITIES = {
         'urgent': 'urgent',

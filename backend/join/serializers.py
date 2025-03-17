@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from join.models import AppUser, Contact, Task, SubTask
+from join.models import Contact, Task, SubTask
 from django.contrib.auth.models import User
 
 class AuthUserSerializer(serializers.ModelSerializer):

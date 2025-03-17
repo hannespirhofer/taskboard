@@ -11,7 +11,7 @@ from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 
 from join.serializers import ContactReadSerializer, ContactCreateSerializer, SubTaskSerializer, TaskReadSerializer, TaskCreateSerializer, TaskUpdateSerializer, AuthUserSerializer
-from join.models import AppUser, Contact, Task, SubTask
+from join.models import Contact, Task, SubTask
 
 # Auth Views
 

@@ -90,7 +90,7 @@
 
       <form id="SignUpForm" onsubmit="register(event)">
         <div class="inputIcon_container">
-            <input type="text" required class="loginInputField" placeholder="Firstname" id="registerFirstName" />
+            <input type="text" class="loginInputField" placeholder="Firstname" id="registerFirstName" />
             <img src="./assets/img/person.png" alt="mailicon" class="loginIcons">
         </div>
         <div class="inputIcon_container">
@@ -111,7 +111,8 @@
             onkeyup="checkPasswords()" />
           <img src="./assets/img/lock.png" alt="passwordIcon" class="loginIcons">
         </div>
-        <p id="signUpPasswordCheckText"></p>
+        <p id="signUpPasswordCheckText" class=""></p>
+        <p id="signUpSuccess" class="none">✅ Success! You can <a href="#" onclick="renderLoginWindow()">Login</a> now.</p>
         <!-- <div class="SignUpPrivacy_container">
           <input type="checkbox" id="privacyCheckbox" required><label for="privacy" class="privacyLabel">I accept
             the&nbsp</label><a class="blueLinks" href="#">Privacy policy</a>
