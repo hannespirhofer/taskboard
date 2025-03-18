@@ -56,7 +56,6 @@
     <div class="login_container" id="loginContentContainer">
 
       <h1 class="loginHeadline">Log in</h1>
-      <hr class="dividerSolid" />
 
       <form action="summary.html" id="loginForm" onsubmit="checkLogin(event)">
         <div class="inputIcon_container">
@@ -85,7 +84,6 @@
 
     <div class="signup_container d-none" id="signupContentContainer">
       <h1 class="loginHeadline">Sign up</h1>
-      <hr class="dividerSolid">
       <!-- <img src="./assets/img/arrow-left-line.png" id="signUpArrowLeft" onclick="redirectTo('../index.html')"> -->
 
       <form id="SignUpForm" onsubmit="register(event)">
@@ -94,12 +92,13 @@
             <img src="./assets/img/person.png" alt="mailicon" class="loginIcons">
         </div>
         <div class="inputIcon_container">
-          <input type="text" required class="loginInputField" placeholder="Username" id="registerUserName" />
-          <img src="./assets/img/person.png" alt="mailicon" class="loginIcons">
+            <input type="email" required class="loginInputField" placeholder="Email" id="registerMailInput" />
+            <img src="./assets/img/mail.png" alt="passwordIcon" class="loginIcons">
         </div>
+        <hr class="dividerSolid">
         <div class="inputIcon_container">
-          <input type="email" required class="loginInputField" placeholder="Email" id="registerMailInput" />
-          <img src="./assets/img/mail.png" alt="passwordIcon" class="loginIcons">
+            <input type="text" required class="loginInputField" placeholder="Username" id="registerUserName" />
+            <img src="./assets/img/person.png" alt="mailicon" class="loginIcons">
         </div>
         <div class="inputIcon_container">
           <input type="password" required class="loginInputField" placeholder="Password" id="registerPassword"
