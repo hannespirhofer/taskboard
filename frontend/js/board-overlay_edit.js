@@ -161,7 +161,7 @@ function collectInputFieldsEdit(id) {
     let progress = task.progress;
     let priority = getPriority();
 
-    return {id, title, description, category, dueDate, progress, priority};
+    return {id, title, description, category, dueDate, progress, ...(priority && {priority})};
 }
 
 

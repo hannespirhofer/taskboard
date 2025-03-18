@@ -37,11 +37,17 @@ function collectInputFields() {
     let dueDate = document.getElementById('dateInput').value;
     let category = document.getElementById('categoryInput').value;
     let taskId = gettingContactId();
-    let priority = getPriority();
-    let progress = document.getElementById('progressSelect').value;
-    if (!progress) { progress = 'todo' }
+    let progress = document.getElementById('progressSelect').value ?? 'todo';
+    let priority = getPriority()
 
-    return { title, description, dueDate, category, taskId, priority, progress };
+    return {
+        title,
+        description,
+        dueDate,
+        category,
+        taskId,
+        ...(priority && {priority}),
+        progress };
 }
 
 
@@ -96,7 +102,7 @@ function getPriority() {
             return prioButtons[i]['name'];
         }
     }
-    return '';
+    return null;
 }
 
 

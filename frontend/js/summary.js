@@ -20,7 +20,6 @@ async function fetchTasks() {
 }
 
 async function initSummary() {
-	debugger
 	const userString = localStorage.getItem('user')
     const user = JSON.parse(userString);
     const currentName = user.firstname != '' ? user.firstname : user.username;

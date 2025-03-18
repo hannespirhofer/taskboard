@@ -1,3 +1,4 @@
+from functools import partial
 from django.contrib.auth import authenticate
 from django.contrib.auth.models import User
 from django.db import IntegrityError
@@ -9,6 +10,8 @@ from rest_framework.views import APIView
 from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
+from rest_framework.mixins import UpdateModelMixin
+from rest_framework.generics import GenericAPIView
 
 from join.serializers import ContactReadSerializer, ContactCreateSerializer, SubTaskSerializer, TaskReadSerializer, TaskCreateSerializer, TaskUpdateSerializer, AuthUserSerializer
 from join.models import Contact, Task, SubTask

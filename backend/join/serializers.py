@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from join.models import Contact, Task, SubTask
 from django.contrib.auth.models import User
+from join.constants import *
 
 class AuthUserSerializer(serializers.ModelSerializer):
     firstname = serializers.CharField(source='first_name')
@@ -66,6 +67,7 @@ class TaskReadSerializer(serializers.ModelSerializer):
 
 class TaskCreateSerializer(serializers.ModelSerializer):
     subtasks = SubTaskSerializer(many=True)
+    priority = serializers.ChoiceField(choices=PRIORITIES, default='medium', required=False)
 
     def create(self, validated_data):
         subtasks = validated_data.pop("subtasks", [])
@@ -80,9 +82,11 @@ class TaskCreateSerializer(serializers.ModelSerializer):
 
 class TaskUpdateSerializer(serializers.ModelSerializer):
     subtasks = SubTaskSerializer(many=True)
+    priority = serializers.ChoiceField(choices=PRIORITIES, default='medium', required=False)
 
     def update(self, instance, validated_data):
         subtasks = validated_data.pop("subtasks", [])
+        instance = self.get_object()
         task = super().update(instance, validated_data)
 
         received_subtask_ids = set()
@@ -99,7 +103,6 @@ class TaskUpdateSerializer(serializers.ModelSerializer):
                 received_subtask_ids.add(new_subtask.id)
 
         SubTask.objects.filter(parent=task).exclude(id__in=received_subtask_ids).delete()
-
         return task
 
     class Meta:
