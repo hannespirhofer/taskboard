@@ -16,13 +16,10 @@ function showElement(id) {
 
 
 function renderSignUpWindow() {
+	document.getElementById("headerSignup").classList.toggle("d-none");
+	document.getElementById("headerLogin").classList.toggle("d-none");
     hideElement('loginContentContainer');
     showElement('signupContentContainer');
-    dom.querySelector("#signUpSuccess").classList.toggle("none", true);
-    // dom.querySelector("#signUpPasswordCheckText").classList.toggle("none", true);
-
-    hideElement('headerSignup');
-    showElement('headerLogin');
 }
 
 function renderLoginWindow() {

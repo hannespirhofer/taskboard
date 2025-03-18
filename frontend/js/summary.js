@@ -5,26 +5,28 @@ tasks = [];
 
 async function init() {
     try {
-        await validateToken();
+		await validateToken();
         await includeHTML();
         tasks = await getTasks();
         initSummary();
     } catch (error) {
-        console.error('An error occurred: ', error);
+		console.error('An error occurred: ', error);
     }
 }
 
 async function fetchTasks() {
-    // tasks = JSON.parse(await getItem("tasks"));
+	// tasks = JSON.parse(await getItem("tasks"));
     tasks = await getTasks()
 }
 
 async function initSummary() {
-    const user = JSON.parse(localStorage.getItem('user'));
-    const currentUsername = user.firstname ?? user.username;
+	debugger
+	const userString = localStorage.getItem('user')
+    const user = JSON.parse(userString);
+    const currentName = user.firstname != '' ? user.firstname : user.username;
     updateGreetingMessage();
-    updateUsername(currentUsername);
-    changeHeaderInitials(currentUsername);
+    updateUsername(currentName);
+    changeHeaderInitials(currentName);
     updateSummaryNumbers();
 
     // implement update Header Initials (only G also when user is logged in)
@@ -59,12 +61,12 @@ function getUser() {
 }
 
 //OK
-function updateUsername(username) {
-    const user = JSON.parse(localStorage.getItem("user"));
+function updateUsername(name) {
+    // const user = JSON.parse(localStorage.getItem("user"));
     const userField = document.getElementById("greetUserName");
-    const text = user.firstname ? user.firstname : user.username;
-    if (text) {
-        userField.innerHTML = text;
+    // const text = user.firstname ? user.firstname : user.username;
+    if (name) {
+        userField.innerHTML = name;
     } else {
         userField.innerHTML = 'Lizard';
     }
