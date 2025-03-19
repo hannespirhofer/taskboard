@@ -59,7 +59,10 @@ async function deleteContact(contactid) {
     try {
         const res = await fetch(`http://127.0.0.1:8000/api/contacts/${contactid}/`, {
             method: 'DELETE',
-            'Authorization': `Token ${token}`
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': `Token ${token}`
+            },
         })
         const data = await res.json()
         return data
