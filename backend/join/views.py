@@ -13,7 +13,7 @@ from rest_framework.status import HTTP_400_BAD_REQUEST, HTTP_200_OK
 from rest_framework.mixins import UpdateModelMixin
 from rest_framework.generics import GenericAPIView
 
-from join.serializers import ContactReadSerializer, ContactCreateSerializer, SubTaskSerializer, TaskReadSerializer, TaskCreateSerializer, TaskUpdateSerializer, AuthUserSerializer
+from join.serializers import ContactReadSerializer, ContactCreateSerializer, SubTaskSerializer, TaskDropSerializer, TaskReadSerializer, TaskCreateSerializer, TaskUpdateSerializer, AuthUserSerializer
 from join.models import Contact, Task, SubTask
 
 # Auth Views
@@ -86,3 +86,8 @@ class TaskViewset(viewsets.ModelViewSet):
 class SubTaskViewset(viewsets.ModelViewSet):
     queryset = SubTask.objects.all()
     serializer_class = SubTaskSerializer
+
+class DropTaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+    serializer_class = TaskDropSerializer
+    http_method_names=['patch']

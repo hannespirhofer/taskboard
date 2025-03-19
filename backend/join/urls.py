@@ -1,13 +1,14 @@
 from django.urls import path, include
 from rest_framework.routers import DefaultRouter
-from join.views import ContactViewset, LoginView, RegisterView, TokenValidationView, TaskViewset, SubTaskViewset
+from join.views import ContactViewset, DropTaskViewSet, LoginView, RegisterView, TokenValidationView, TaskViewset, SubTaskViewset
 
 
 # Create API router and register subroutes
 router = DefaultRouter()
 router.register(r"contacts", ContactViewset)
-router.register(r"tasks", TaskViewset)
+router.register(r"tasks", TaskViewset, basename='task')
 router.register(r"subtasks", SubTaskViewset)
+router.register(r"taskdrop", DropTaskViewSet, basename='taskdrop')
 
 # Django URLpatterns: /api/
 urlpatterns = [

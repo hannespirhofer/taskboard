@@ -130,7 +130,7 @@ async function patchTask(task) {
         const newprogress = task.progress;
 
         if (!taskid) throw new Error('Task id not found.')
-        const res = await fetch(`http://127.0.0.1:8000/api/tasks/${taskid}/`, {
+        const res = await fetch(`http://127.0.0.1:8000/api/taskdrop/${taskid}/`, {
             method: 'PATCH',
             headers: {
                 'Content-Type': 'application/json',

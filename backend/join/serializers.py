@@ -57,6 +57,11 @@ class SubTaskSerializer(serializers.ModelSerializer):
         model = SubTask
         fields = '__all__'
 
+class TaskDropSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Task
+        fields = '__all__'
+
 
 class TaskReadSerializer(serializers.ModelSerializer):
     subtasks = SubTaskSerializer(many=True)
@@ -86,17 +91,20 @@ class TaskUpdateSerializer(serializers.ModelSerializer):
 
     def update(self, instance, validated_data):
         subtasks = validated_data.pop("subtasks", [])
-        instance = self.get_object()
+        # instance = self.get_object()
         task = super().update(instance, validated_data)
 
         received_subtask_ids = set()
 
         for subtask in subtasks:
+            # Update Subtask if there is an id
             if "id" in subtask:
+                print('FIRST')
                 id = subtask.get("id")
                 SubTask.objects.filter(pk=id).update(parent=task, **subtask)
                 received_subtask_ids.add(id)
             else:
+                # Create subtask if there is no id and a parent id
                 if subtask.get("parent"):
                     subtask.pop("parent")
                 new_subtask = SubTask.objects.create(parent=task, **subtask)
